@@ -1,0 +1,334 @@
+/* ==========================================================================
+   main.css — Global styles for reconfintechconsultancy.com
+   Tailwind layers + custom properties + reusable utility classes
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. Tailwind directives
+   -------------------------------------------------------------------------- */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* --------------------------------------------------------------------------
+   2. @layer base — CSS custom properties mirroring Tailwind tokens
+      These let raw CSS reference design tokens outside Tailwind's JIT
+      (e.g. backdrop-filter blur, custom transition curves, keyframe colors).
+   -------------------------------------------------------------------------- */
+@layer base {
+  :root {
+    /* Colors */
+    --color-ink:            #111827;
+    --color-body:           #4B5563;
+    --color-primary:        #0052FF;
+    --color-primary-dark:   #0040CC;
+    --color-surface:        #FFFFFF;
+    --color-surface-soft:   #F5F8FF;
+    --color-border-soft:    #E7ECF5;
+
+    /* Shadows */
+    --shadow-soft: 0px 10px 30px rgba(0, 0, 0, 0.03);
+    --shadow-mid:  0px 15px 40px rgba(0, 0, 0, 0.06);
+
+    /* Transitions */
+    --ease-out-expo: cubic-bezier(0.4, 0, 0.2, 1);
+    --ease-sheet:    cubic-bezier(0.32, 0.72, 0, 1);
+
+    /*
+     * --dock-height: approximate height of the mobile bottom dock (Prompt 2).
+     * Used by the chat FAB (Prompt 5) to calculate its bottom offset so it
+     * never visually overlaps the dock. Adjust if dock padding/button sizing
+     * changes during maintenance.
+     */
+    --dock-height: 80px;
+
+    /*
+     * Z-INDEX STACKING ORDER (fixed-position elements)
+     * ────────────────────────────────────────────────
+     *  z-10–39   Page content
+     *  z-40      Sticky header (Prompt 2)
+     *  z-45      Chat FAB (Prompt 5) — below drawer/dock
+     *  z-50      Mobile dock (Prompt 2),
+     *            Drawer backdrop (Prompt 2),
+     *            Drawer sheet (Prompt 2)
+     *
+     * When the drawer is open, the FAB hides itself via JS so it never
+     * shows through the backdrop or competes with the sheet.
+     */
+  }
+
+  /* ---- Base: body scroll lock class ---- */
+  body.scroll-locked {
+    overflow: hidden;
+    padding-right: var(--scrollbar-compensate, 0px);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   3. @layer utilities — Project-specific reusable classes
+   -------------------------------------------------------------------------- */
+@layer utilities {
+  /* ---- Layout container ---- */
+  /*
+   * .section-container
+   * Max-width constrained wrapper with responsive horizontal padding.
+   * Usage:  <section class="section-container">…</section>
+   */
+  .section-container {
+    @apply mx-auto w-full max-w-7xl px-6 lg:px-12;
+  }
+
+  /* ---- Card surface ---- */
+  /*
+   * .card-surface
+   * Base card / container with rounded-xl, white fill, soft shadow,
+   * and a light border. Hover lifts the card (translateY(-2px)) and
+   * elevates the shadow.
+   */
+  .card-surface {
+    @apply rounded-xl border border-border-soft bg-surface shadow-soft;
+    transition:
+      transform 250ms var(--ease-out-expo),
+      box-shadow 250ms var(--ease-out-expo);
+  }
+  .card-surface:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-mid);
+  }
+
+  /* ---- Primary button ---- */
+  /*
+   * .btn-primary
+   * Solid brand-blue button with pill-like rounded-xl shape.
+   * Includes hover, active, focus-visible, and disabled states.
+   */
+  .btn-primary {
+    @apply inline-flex items-center justify-center rounded-xl bg-primary
+           px-6 py-3 text-sm font-semibold leading-none text-surface no-underline;
+    transition: all 250ms var(--ease-out-expo);
+  }
+  .btn-primary:hover {
+    background-color: var(--color-primary-dark);
+  }
+  .btn-primary:active {
+    transform: scale(0.97);
+  }
+  .btn-primary:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 3px;
+  }
+  .btn-primary:disabled {
+    @apply cursor-not-allowed opacity-50;
+    transform: none;
+  }
+
+  /* ---- Secondary button ---- */
+  /*
+   * .btn-secondary
+   * Outlined variant — transparent fill, brand-blue border and text.
+   */
+  .btn-secondary {
+    @apply inline-flex items-center justify-center rounded-xl border-2
+           border-primary bg-transparent px-6 py-3 text-sm font-semibold
+           leading-none text-primary no-underline;
+    transition: all 250ms var(--ease-out-expo);
+  }
+  .btn-secondary:hover {
+    @apply bg-primary text-surface;
+  }
+  .btn-secondary:active {
+    transform: scale(0.97);
+  }
+  .btn-secondary:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 3px;
+  }
+  .btn-secondary:disabled {
+    @apply cursor-not-allowed opacity-50;
+    transform: none;
+  }
+
+  /* ---- Pill badge (service category tags) ---- */
+  /*
+   * .pill-badge
+   * Small rounded-full badge tinted with the soft-blue background
+   * and primary-blue text. Used for service category labels.
+   */
+  .pill-badge {
+    @apply inline-block rounded-full bg-surface-soft px-4 py-1
+           text-xs font-semibold text-primary;
+  }
+
+  /* ---- Eyebrow label ---- */
+  /*
+   * .eyebrow-label
+   * Small uppercase label for section headers and meta text.
+   */
+  .eyebrow-label {
+    @apply block text-xs font-semibold uppercase tracking-widest text-body;
+  }
+
+  /* ---- Display heading ---- */
+  /*
+   * .display-heading
+   * Bold, tightly-leaded heading for hero and section titles.
+   */
+  .display-heading {
+    @apply font-bold leading-none tracking-tight text-ink;
+  }
+
+  /* ---- Services dropdown (desktop) ---- */
+  .services-group .dropdown-panel {
+    opacity: 0;
+    transform: translateY(4px);
+    pointer-events: none;
+    transition:
+      opacity 200ms var(--ease-out-expo),
+      transform 200ms var(--ease-out-expo);
+  }
+  .services-group:hover .dropdown-panel,
+  .services-group:focus-within .dropdown-panel {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  /* ---- Bottom-sheet drawer ---- */
+  .drawer-sheet {
+    transform: translateY(100%);
+    transition: transform 320ms var(--ease-sheet);
+  }
+  .drawer-sheet.open {
+    transform: translateY(0);
+  }
+
+  .drawer-backdrop {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 250ms ease;
+  }
+  .drawer-backdrop.open {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  /* ---- Hero floating widget (desktop) ---- */
+  .hero-widget {
+    transform: rotate(1.2deg) translateY(-8px);
+  }
+
+  /* ---- Decorative gradient blob behind widget ---- */
+  .hero-blob {
+    position: absolute;
+    border-radius: 50%;
+    background: radial-gradient(circle at 40% 50%, rgba(0, 82, 255, 0.10) 0%, transparent 65%);
+    filter: blur(70px);
+    pointer-events: none;
+  }
+
+  /* ---- Mobile/tablet: flatten the widget ---- */
+  @media not all and (min-width: 1024px) {
+    .hero-widget {
+      transform: none;
+    }
+  }
+
+  /* ---- Reduced motion: flatten all transforms and skip animations ---- */
+  @media (prefers-reduced-motion: reduce) {
+    .hero-widget {
+      transform: none;
+    }
+    .hero-widget,
+    .hero-widget * {
+      animation: none !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+
+  /* ---- Chat FAB (Prompt 5) ---- */
+
+  /* Position: above the mobile dock on small screens, fixed bottom-right on desktop */
+  .chat-fab {
+    bottom: calc(var(--dock-height, 80px) + 16px);
+  }
+  @media (min-width: 768px) {
+    .chat-fab {
+      bottom: 2rem;
+    }
+  }
+
+  /* Expandable panel — hidden by default, revealed via .expanded */
+  .chat-fab .fab-panel {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    pointer-events: none;
+    transition:
+      max-height 250ms var(--ease-out-expo),
+      opacity 250ms var(--ease-out-expo),
+      padding 250ms var(--ease-out-expo);
+  }
+  .chat-fab.expanded .fab-panel {
+    max-height: 320px;
+    opacity: 1;
+    pointer-events: auto;
+  }
+  /* On mobile the panel is never shown — the trigger opens WhatsApp directly */
+  @media not all and (min-width: 768px) {
+    .chat-fab .fab-panel {
+      display: none !important;
+    }
+  }
+
+  /* Drawer-open state: FAB fades + slides out of view */
+  .chat-fab.fab-hidden {
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(16px);
+    transition:
+      opacity 150ms var(--ease-out-expo),
+      transform 150ms var(--ease-out-expo);
+  }
+
+  /* Reduced motion: skip transitions */
+  @media (prefers-reduced-motion: reduce) {
+    .chat-fab,
+    .chat-fab * {
+      transition-duration: 0.01ms !important;
+    }
+  }
+
+  /* ---- Notice-bar marquee ---- */
+  .notice-track {
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  .notice-content {
+    display: inline-flex;
+    animation: marquee-scroll 60s linear infinite;
+  }
+  @media (max-width: 768px) {
+    .notice-content {
+      animation-duration: 30s;
+    }
+  }
+
+  /* ---- Marquee / infinite scroll (client logos) ---- */
+  @keyframes marquee-scroll {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+  }
+  .marquee-track {
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  .marquee-content {
+    display: inline-flex;
+    animation: marquee-scroll 40s linear infinite;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .marquee-content {
+      animation: none;
+    }
+  }
+}
