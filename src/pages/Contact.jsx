@@ -71,12 +71,16 @@ export default function Contact() {
                 <label htmlFor="interest" className="mb-1.5 block text-xs font-semibold uppercase tracking-wider text-ink">Area of Interest</label>
                 <select id="interest" value={form.interest} onChange={handleChange} className="w-full rounded-lg border border-border-soft bg-surface-soft px-4 py-2.5 text-sm text-body focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary">
                   <option value="">Select a service</option>
-                  <option>Payment Infrastructure</option>
-                  <option>Risk &amp; Compliance</option>
-                  <option>Data Engineering</option>
-                  <option>Platform Architecture</option>
-                  <option>Financial Analytics</option>
-                  <option>Cybersecurity Advisory</option>
+                  <option>Automated Transaction Reconciliation</option>
+                  <option>FinTech Compliance &amp; Data Auditing</option>
+                  <option>Multi-Payment Gateway Reconciliation</option>
+                  <option>Cross-Border Settlement Architecture</option>
+                  <option>AI-Driven Ledger Analytics</option>
+                  <option>Web Development &amp; Portal Engineering</option>
+                  <option>Mobile App Development</option>
+                  <option>IoT &amp; Embedded Systems Integration</option>
+                  <option>AI &amp; Machine Learning Integration</option>
+                  <option>Cybersecurity &amp; Regulatory Advisory</option>
                   <option>General Inquiry</option>
                 </select>
               </div>
