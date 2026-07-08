@@ -127,101 +127,155 @@ export default function Layout() {
                       <path fillRule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clipRule="evenodd" />
                     </svg>
                   </button>
-                  <div id="services-dropdown" role="menu" aria-label="Services" className="dropdown-panel absolute -left-4 top-full mt-3 w-[520px] rounded-xl border border-border-soft bg-surface p-3 shadow-mid">
-                    <div className="grid grid-cols-2 gap-1">
-                      <NavLink to="/services/automated-reconciliation" role="menuitem" className="flex items-start gap-3 rounded-lg px-3 py-2.5 transition-colors duration-150 hover:bg-surface-soft">
-                        <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-surface-soft text-primary">
-                          <svg className="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M2.25 8.25h19.5M2.25 9h19.5m-16.5 5.25h6m-6 2.25h3m-3.75 3h15a2.25 2.25 0 002.25-2.25V6.75A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25v10.5A2.25 2.25 0 004.5 19.5z" /></svg>
+                  <div id="services-dropdown" role="menu" aria-label="Services" className="dropdown-panel absolute -left-4 top-full mt-3 w-[720px] rounded-xl border border-border-soft bg-surface p-4 shadow-mid">
+                    <div className="grid grid-cols-4 gap-x-2 gap-y-0.5">
+                      <NavLink to="/services/automated-reconciliation" role="menuitem" className="flex items-start gap-2.5 rounded-lg px-3 py-2 transition-colors duration-150 hover:bg-surface-soft">
+                        <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-surface-soft text-primary">
+                          <svg className="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M2.25 8.25h19.5M2.25 9h19.5m-16.5 5.25h6m-6 2.25h3m-3.75 3h15a2.25 2.25 0 002.25-2.25V6.75A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25v10.5A2.25 2.25 0 004.5 19.5z" /></svg>
                         </span>
                         <span className="min-w-0">
-                          <span className="block text-sm font-semibold text-ink">Automated Reconciliation</span>
-                          <span className="block text-xs text-body">AI-driven ledger matching</span>
+                          <span className="block text-sm font-semibold text-ink leading-tight">Automated Reconciliation</span>
+                          <span className="block text-[11px] text-body/70">AI-driven ledger matching</span>
                         </span>
                       </NavLink>
-                      <NavLink to="/services/compliance-auditing" role="menuitem" className="flex items-start gap-3 rounded-lg px-3 py-2.5 transition-colors duration-150 hover:bg-surface-soft">
-                        <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-surface-soft text-primary">
-                          <svg className="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" /></svg>
+                      <NavLink to="/services/compliance-auditing" role="menuitem" className="flex items-start gap-2.5 rounded-lg px-3 py-2 transition-colors duration-150 hover:bg-surface-soft">
+                        <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-surface-soft text-primary">
+                          <svg className="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" /></svg>
                         </span>
                         <span className="min-w-0">
-                          <span className="block text-sm font-semibold text-ink">Compliance &amp; Auditing</span>
-                          <span className="block text-xs text-body">Regulatory-ready frameworks</span>
+                          <span className="block text-sm font-semibold text-ink leading-tight">Compliance &amp; Auditing</span>
+                          <span className="block text-[11px] text-body/70">Regulatory-ready frameworks</span>
                         </span>
                       </NavLink>
-                      <NavLink to="/services/multi-payment-reconciliation" role="menuitem" className="flex items-start gap-3 rounded-lg px-3 py-2.5 transition-colors duration-150 hover:bg-surface-soft">
-                        <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-surface-soft text-primary">
-                          <svg className="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M3.75 3v11.25A2.25 2.25 0 006 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0118 16.5h-2.25m-7.5 0h7.5m-7.5 0l-1 3m8.5-3l1 3m0 0l.5 1.5m-.5-1.5h-9.5m0 0l-.5 1.5M9 11.25v1.5M12 9v3.75m3-6v6" /></svg>
+                      <NavLink to="/services/multi-payment-reconciliation" role="menuitem" className="flex items-start gap-2.5 rounded-lg px-3 py-2 transition-colors duration-150 hover:bg-surface-soft">
+                        <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-surface-soft text-primary">
+                          <svg className="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M3.75 3v11.25A2.25 2.25 0 006 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0118 16.5h-2.25m-7.5 0h7.5m-7.5 0l-1 3m8.5-3l1 3m0 0l.5 1.5m-.5-1.5h-9.5m0 0l-.5 1.5M9 11.25v1.5M12 9v3.75m3-6v6" /></svg>
                         </span>
                         <span className="min-w-0">
-                          <span className="block text-sm font-semibold text-ink">Multi-Payment Reconciliation</span>
-                          <span className="block text-xs text-body">50+ global acquirer support</span>
+                          <span className="block text-sm font-semibold text-ink leading-tight">Multi-Payment Reconciliation</span>
+                          <span className="block text-[11px] text-body/70">50+ global acquirer support</span>
                         </span>
                       </NavLink>
-                      <NavLink to="/services/cross-border-settlement" role="menuitem" className="flex items-start gap-3 rounded-lg px-3 py-2.5 transition-colors duration-150 hover:bg-surface-soft">
-                        <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-surface-soft text-primary">
-                          <svg className="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M20.25 6.375c0 2.278-3.694 4.125-8.25 4.125S3.75 8.653 3.75 6.375m16.5 0c0-2.278-3.694-4.125-8.25-4.125S3.75 4.097 3.75 6.375m16.5 0v11.25c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125V6.375m16.5 0v3.75m-16.5-3.75v3.75m16.5 0v3.75C20.25 16.153 16.556 18 12 18s-8.25-1.847-8.25-4.125v-3.75m16.5 0c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125" /></svg>
+                      <NavLink to="/services/cross-border-settlement" role="menuitem" className="flex items-start gap-2.5 rounded-lg px-3 py-2 transition-colors duration-150 hover:bg-surface-soft">
+                        <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-surface-soft text-primary">
+                          <svg className="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M20.25 6.375c0 2.278-3.694 4.125-8.25 4.125S3.75 8.653 3.75 6.375m16.5 0c0-2.278-3.694-4.125-8.25-4.125S3.75 4.097 3.75 6.375m16.5 0v11.25c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125V6.375m16.5 0v3.75m-16.5-3.75v3.75m16.5 0v3.75C20.25 16.153 16.556 18 12 18s-8.25-1.847-8.25-4.125v-3.75m16.5 0c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125" /></svg>
                         </span>
                         <span className="min-w-0">
-                          <span className="block text-sm font-semibold text-ink">Cross-Border Settlement</span>
-                          <span className="block text-xs text-body">SWIFT, RTGS, FX netting</span>
+                          <span className="block text-sm font-semibold text-ink leading-tight">Cross-Border Settlement</span>
+                          <span className="block text-[11px] text-body/70">SWIFT, RTGS, FX netting</span>
                         </span>
                       </NavLink>
-                      <NavLink to="/services/ai-ledger-analytics" role="menuitem" className="flex items-start gap-3 rounded-lg px-3 py-2.5 transition-colors duration-150 hover:bg-surface-soft">
-                        <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-surface-soft text-primary">
-                          <svg className="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z" /></svg>
+                      <NavLink to="/services/ai-ledger-analytics" role="menuitem" className="flex items-start gap-2.5 rounded-lg px-3 py-2 transition-colors duration-150 hover:bg-surface-soft">
+                        <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-surface-soft text-primary">
+                          <svg className="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z" /></svg>
                         </span>
                         <span className="min-w-0">
-                          <span className="block text-sm font-semibold text-ink">AI-Driven Ledger Analytics</span>
-                          <span className="block text-xs text-body">Predictive financial intelligence</span>
+                          <span className="block text-sm font-semibold text-ink leading-tight">AI-Driven Ledger Analytics</span>
+                          <span className="block text-[11px] text-body/70">Predictive financial intelligence</span>
                         </span>
                       </NavLink>
-                      <NavLink to="/services/web-development" role="menuitem" className="flex items-start gap-3 rounded-lg px-3 py-2.5 transition-colors duration-150 hover:bg-surface-soft">
-                        <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-surface-soft text-primary">
-                          <svg className="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5" /></svg>
+                      <NavLink to="/services/payment-aggregator" role="menuitem" className="flex items-start gap-2.5 rounded-lg px-3 py-2 transition-colors duration-150 hover:bg-surface-soft">
+                        <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-surface-soft text-primary">
+                          <svg className="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M2.25 8.25h19.5M2.25 9h19.5m-16.5 5.25h6m-6 2.25h3m-3.75 3h15a2.25 2.25 0 002.25-2.25V6.75A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25v10.5A2.25 2.25 0 004.5 19.5z" /></svg>
                         </span>
                         <span className="min-w-0">
-                          <span className="block text-sm font-semibold text-ink">Web Development &amp; Portals</span>
-                          <span className="block text-xs text-body">Financial portal engineering</span>
+                          <span className="block text-sm font-semibold text-ink leading-tight">Payment Aggregator</span>
+                          <span className="block text-[11px] text-body/70">Multi-channel payment acceptance</span>
                         </span>
                       </NavLink>
-                      <NavLink to="/services/app-development" role="menuitem" className="flex items-start gap-3 rounded-lg px-3 py-2.5 transition-colors duration-150 hover:bg-surface-soft">
-                        <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-surface-soft text-primary">
-                          <svg className="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M10.5 1.5H8.25A2.25 2.25 0 006 3.75v16.5a2.25 2.25 0 002.25 2.25h7.5A2.25 2.25 0 0018 20.25V3.75a2.25 2.25 0 00-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3" /></svg>
+                      <NavLink to="/services/aeps" role="menuitem" className="flex items-start gap-2.5 rounded-lg px-3 py-2 transition-colors duration-150 hover:bg-surface-soft">
+                        <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-surface-soft text-primary">
+                          <svg className="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M15.75 5.25a3 3 0 013 3m3 0a6 6 0 01-7.029 5.912c-.563-.097-1.159.026-1.563.43L10.5 17.25H8.25v2.25H6v2.25H2.25v-2.818c0-.597.237-1.17.659-1.591l6.499-6.499c.404-.404.527-1 .43-1.563A6 6 0 1121.75 8.25z" /></svg>
                         </span>
                         <span className="min-w-0">
-                          <span className="block text-sm font-semibold text-ink">Mobile App Development</span>
-                          <span className="block text-xs text-body">iOS &amp; Android financial apps</span>
+                          <span className="block text-sm font-semibold text-ink leading-tight">AEPS</span>
+                          <span className="block text-[11px] text-body/70">Aadhaar biometric payments</span>
                         </span>
                       </NavLink>
-                      <NavLink to="/services/iot-integrations" role="menuitem" className="flex items-start gap-3 rounded-lg px-3 py-2.5 transition-colors duration-150 hover:bg-surface-soft">
-                        <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-surface-soft text-primary">
-                          <svg className="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M8.25 3v1.5m4.5-1.5v1.5m-3 15v1.5m4.5-1.5v1.5m-6-6h6m-6 3h6m-6-6h6m-6-3h6M3 6.75C3 5.507 4.007 4.5 5.25 4.5h13.5c1.243 0 2.25 1.007 2.25 2.25v10.5c0 1.243-1.007 2.25-2.25 2.25H5.25C4.007 19.5 3 18.493 3 17.25V6.75z" /></svg>
+                      <NavLink to="/services/cybersecurity-advisory" role="menuitem" className="flex items-start gap-2.5 rounded-lg px-3 py-2 transition-colors duration-150 hover:bg-surface-soft">
+                        <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-surface-soft text-primary">
+                          <svg className="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z" /></svg>
                         </span>
                         <span className="min-w-0">
-                          <span className="block text-sm font-semibold text-ink">IoT &amp; Embedded Systems</span>
-                          <span className="block text-xs text-body">POS, ATM, HSM connectivity</span>
+                          <span className="block text-sm font-semibold text-ink leading-tight">Cybersecurity Advisory</span>
+                          <span className="block text-[11px] text-body/70">SOC 2, zero-trust, pen testing</span>
                         </span>
                       </NavLink>
-                      <NavLink to="/services/ai-ml-integrations" role="menuitem" className="flex items-start gap-3 rounded-lg px-3 py-2.5 transition-colors duration-150 hover:bg-surface-soft">
-                        <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-surface-soft text-primary">
-                          <svg className="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.455 2.456L21.75 6l-1.036.259a3.375 3.375 0 00-2.455 2.456zM16.894 20.567L16.5 21.75l-.394-1.183a2.25 2.25 0 00-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 001.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 001.423 1.423l1.183.394-1.183.394a2.25 2.25 0 00-1.423 1.423z" /></svg>
+                      <NavLink to="/services/tech-consulting" role="menuitem" className="flex items-start gap-2.5 rounded-lg px-3 py-2 transition-colors duration-150 hover:bg-surface-soft">
+                        <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-surface-soft text-primary">
+                          <svg className="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M9.75 3.75v3.75m0 0v3.75m0-3.75h3.75m-3.75 0H9.75m9 3.75a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                         </span>
                         <span className="min-w-0">
-                          <span className="block text-sm font-semibold text-ink">AI &amp; ML Integration</span>
-                          <span className="block text-xs text-body">Custom models &amp; NLP</span>
+                          <span className="block text-sm font-semibold text-ink leading-tight">Technology Consulting</span>
+                          <span className="block text-[11px] text-body/70">Strategic FinTech advisory</span>
                         </span>
                       </NavLink>
-                      <NavLink to="/services/cybersecurity-advisory" role="menuitem" className="flex items-start gap-3 rounded-lg px-3 py-2.5 transition-colors duration-150 hover:bg-surface-soft">
-                        <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-surface-soft text-primary">
-                          <svg className="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z" /></svg>
+                      <NavLink to="/services/saas-engineering" role="menuitem" className="flex items-start gap-2.5 rounded-lg px-3 py-2 transition-colors duration-150 hover:bg-surface-soft">
+                        <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-surface-soft text-primary">
+                          <svg className="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M2.25 15a4.5 4.5 0 004.5 4.5H18a3.75 3.75 0 001.332-7.257 3 3 0 00-3.758-3.848 5.25 5.25 0 00-10.233 2.33A4.502 4.502 0 002.25 15z" /></svg>
                         </span>
                         <span className="min-w-0">
-                          <span className="block text-sm font-semibold text-ink">Cybersecurity Advisory</span>
-                          <span className="block text-xs text-body">SOC 2, zero-trust, pen testing</span>
+                          <span className="block text-sm font-semibold text-ink leading-tight">SaaS Platform Engineering</span>
+                          <span className="block text-[11px] text-body/70">Multi-tenant FinTech SaaS</span>
+                        </span>
+                      </NavLink>
+                      <NavLink to="/services/software-development" role="menuitem" className="flex items-start gap-2.5 rounded-lg px-3 py-2 transition-colors duration-150 hover:bg-surface-soft">
+                        <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-surface-soft text-primary">
+                          <svg className="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M6.75 7.5l3 2.25-3 2.25m4.5 0h3m-9 9h13.5A2.25 2.25 0 0021 18.75V5.25A2.25 2.25 0 0018.75 3H5.25A2.25 2.25 0 003 5.25v13.5A2.25 2.25 0 005.25 21z" /></svg>
+                        </span>
+                        <span className="min-w-0">
+                          <span className="block text-sm font-semibold text-ink leading-tight">Software Development</span>
+                          <span className="block text-[11px] text-body/70">Custom financial software</span>
+                        </span>
+                      </NavLink>
+                      <NavLink to="/services/tech-development" role="menuitem" className="flex items-start gap-2.5 rounded-lg px-3 py-2 transition-colors duration-150 hover:bg-surface-soft">
+                        <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-surface-soft text-primary">
+                          <svg className="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M14.25 9.75L16.5 12l-2.25 2.25m-4.5 0L7.5 12l2.25-2.25M6 20.25h12A2.25 2.25 0 0020.25 18V6A2.25 2.25 0 0018 3.75H6A2.25 2.25 0 003.75 6v12A2.25 2.25 0 006 20.25z" /></svg>
+                        </span>
+                        <span className="min-w-0">
+                          <span className="block text-sm font-semibold text-ink leading-tight">Technology Development</span>
+                          <span className="block text-[11px] text-body/70">Cloud, DevOps &amp; platform engineering</span>
+                        </span>
+                      </NavLink>
+                      <NavLink to="/services/web-development" role="menuitem" className="flex items-start gap-2.5 rounded-lg px-3 py-2 transition-colors duration-150 hover:bg-surface-soft">
+                        <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-surface-soft text-primary">
+                          <svg className="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5" /></svg>
+                        </span>
+                        <span className="min-w-0">
+                          <span className="block text-sm font-semibold text-ink leading-tight">Web Development &amp; Portals</span>
+                          <span className="block text-[11px] text-body/70">Financial portal engineering</span>
+                        </span>
+                      </NavLink>
+                      <NavLink to="/services/app-development" role="menuitem" className="flex items-start gap-2.5 rounded-lg px-3 py-2 transition-colors duration-150 hover:bg-surface-soft">
+                        <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-surface-soft text-primary">
+                          <svg className="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M10.5 1.5H8.25A2.25 2.25 0 006 3.75v16.5a2.25 2.25 0 002.25 2.25h7.5A2.25 2.25 0 0018 20.25V3.75a2.25 2.25 0 00-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3" /></svg>
+                        </span>
+                        <span className="min-w-0">
+                          <span className="block text-sm font-semibold text-ink leading-tight">Mobile App Development</span>
+                          <span className="block text-[11px] text-body/70">iOS &amp; Android financial apps</span>
+                        </span>
+                      </NavLink>
+                      <NavLink to="/services/iot-integrations" role="menuitem" className="flex items-start gap-2.5 rounded-lg px-3 py-2 transition-colors duration-150 hover:bg-surface-soft">
+                        <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-surface-soft text-primary">
+                          <svg className="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M8.25 3v1.5m4.5-1.5v1.5m-3 15v1.5m4.5-1.5v1.5m-6-6h6m-6 3h6m-6-6h6m-6-3h6M3 6.75C3 5.507 4.007 4.5 5.25 4.5h13.5c1.243 0 2.25 1.007 2.25 2.25v10.5c0 1.243-1.007 2.25-2.25 2.25H5.25C4.007 19.5 3 18.493 3 17.25V6.75z" /></svg>
+                        </span>
+                        <span className="min-w-0">
+                          <span className="block text-sm font-semibold text-ink leading-tight">IoT &amp; Embedded Systems</span>
+                          <span className="block text-[11px] text-body/70">POS, ATM, HSM connectivity</span>
+                        </span>
+                      </NavLink>
+                      <NavLink to="/services/ai-ml-integrations" role="menuitem" className="flex items-start gap-2.5 rounded-lg px-3 py-2 transition-colors duration-150 hover:bg-surface-soft">
+                        <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-surface-soft text-primary">
+                          <svg className="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.455 2.456L21.75 6l-1.036.259a3.375 3.375 0 00-2.455 2.456zM16.894 20.567L16.5 21.75l-.394-1.183a2.25 2.25 0 00-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 001.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 001.423 1.423l1.183.394-1.183.394a2.25 2.25 0 00-1.423 1.423z" /></svg>
+                        </span>
+                        <span className="min-w-0">
+                          <span className="block text-sm font-semibold text-ink leading-tight">AI &amp; ML Integration</span>
+                          <span className="block text-[11px] text-body/70">Custom models &amp; NLP</span>
                         </span>
                       </NavLink>
                     </div>
-                    <div className="mt-2 border-t border-border-soft pt-2 text-center">
-                      <Link to="/services" className="text-xs font-semibold text-primary hover:text-primary-dark">View All Services &rarr;</Link>
+                    <div className="mt-3 border-t border-border-soft pt-3 text-center">
+                      <Link to="/services" className="text-xs font-semibold text-primary hover:text-primary-dark">View All 16 Services &rarr;</Link>
                     </div>
                   </div>
                 </div>
@@ -291,6 +345,8 @@ export default function Layout() {
                 <li><NavLink to="/services/multi-payment-reconciliation" className="text-sm text-white/60 transition-colors duration-150 hover:text-white">Multi-Payment Reconciliation</NavLink></li>
                 <li><NavLink to="/services/cross-border-settlement" className="text-sm text-white/60 transition-colors duration-150 hover:text-white">Cross-Border Settlement</NavLink></li>
                 <li><NavLink to="/services/ai-ledger-analytics" className="text-sm text-white/60 transition-colors duration-150 hover:text-white">AI-Driven Ledger Analytics</NavLink></li>
+                <li><NavLink to="/services/payment-aggregator" className="text-sm text-white/60 transition-colors duration-150 hover:text-white">Payment Aggregator</NavLink></li>
+                <li><NavLink to="/services/aeps" className="text-sm text-white/60 transition-colors duration-150 hover:text-white">AEPS</NavLink></li>
               </ul>
             </div>
 
@@ -298,6 +354,10 @@ export default function Layout() {
             <div>
               <h3 className="mb-4 text-[11px] font-bold uppercase tracking-[0.15em] text-white/40">Technology</h3>
               <ul className="space-y-2.5">
+                <li><NavLink to="/services/tech-consulting" className="text-sm text-white/60 transition-colors duration-150 hover:text-white">Technology Consulting</NavLink></li>
+                <li><NavLink to="/services/saas-engineering" className="text-sm text-white/60 transition-colors duration-150 hover:text-white">SaaS Platform Engineering</NavLink></li>
+                <li><NavLink to="/services/software-development" className="text-sm text-white/60 transition-colors duration-150 hover:text-white">Software Development</NavLink></li>
+                <li><NavLink to="/services/tech-development" className="text-sm text-white/60 transition-colors duration-150 hover:text-white">Technology Development</NavLink></li>
                 <li><NavLink to="/services/web-development" className="text-sm text-white/60 transition-colors duration-150 hover:text-white">Web Development &amp; Portals</NavLink></li>
                 <li><NavLink to="/services/app-development" className="text-sm text-white/60 transition-colors duration-150 hover:text-white">Mobile App Development</NavLink></li>
                 <li><NavLink to="/services/iot-integrations" className="text-sm text-white/60 transition-colors duration-150 hover:text-white">IoT &amp; Embedded Systems</NavLink></li>

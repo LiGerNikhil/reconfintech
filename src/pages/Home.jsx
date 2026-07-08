@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
 import RevealOnScroll from '../components/RevealOnScroll'
+import NewServicesSection from '../components/NewServicesSection'
+import CoreCapabilities from '../components/CoreCapabilities'
 
 const featuredServices = [
   {
@@ -173,44 +175,7 @@ export default function Home() {
       </section>
       </RevealOnScroll>
 
-      {/* SERVICES GRID */}
-      <RevealOnScroll>
-      <section aria-labelledby="services-heading" className="section-container py-16 md:py-20 lg:py-24">
-        <div className="mx-auto mb-12 max-w-2xl text-center lg:mb-16">
-          <span className="eyebrow-label">Core Capabilities</span>
-          <h2 id="services-heading" className="display-heading mt-3 text-3xl sm:text-4xl lg:text-5xl">
-            Enterprise Automated Reconciliation Solutions
-          </h2>
-          <p className="mt-4 text-base leading-relaxed text-body sm:text-lg">
-            Recon FinTech Consultancy delivers end-to-end automated transaction reconciliation systems,
-            FinTech compliance data auditing frameworks, and cross-border financial settlement consultancy
-            trusted by the world&rsquo;s leading financial institutions and fastest-growing neo-challenger startups.
-          </p>
-        </div>
-
-        <div className="grid gap-6 md:grid-cols-2 md:gap-8 lg:grid-cols-2 xl:grid-cols-4">
-          {featuredServices.map((svc) => (
-            <Link key={svc.title} to={svc.to} className="card-surface flex h-full flex-col p-6 sm:p-8 no-underline">
-              <span className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-primary">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="h-6 w-6" aria-hidden="true">
-                  <path strokeLinecap="round" strokeLinejoin="round" d={svc.path} />
-                </svg>
-              </span>
-              <h3 className="mb-2 text-lg font-semibold text-ink">{svc.title}</h3>
-              <p className="mb-4 flex-1 text-sm leading-relaxed text-body">{svc.desc}</p>
-              <div className="flex flex-wrap gap-2">
-                {svc.badges.map((b) => (
-                  <span key={b} className="pill-badge">{b}</span>
-                ))}
-              </div>
-            </Link>
-          ))}
-        </div>
-        <div className="mt-10 text-center">
-          <Link to="/services" className="btn-secondary">View All Recon FinTech Services</Link>
-        </div>
-      </section>
-      </RevealOnScroll>
+      <CoreCapabilities />
 
       {/* CTA BANNER */}
       <RevealOnScroll>
@@ -238,6 +203,8 @@ export default function Home() {
         </div>
       </section>
       </RevealOnScroll>
+
+      <NewServicesSection />
     </>
   )
 }

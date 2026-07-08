@@ -82,6 +82,54 @@ const serviceList = [
     icon: 'M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.455 2.456L21.75 6l-1.036.259a3.375 3.375 0 00-2.455 2.456zM16.894 20.567L16.5 21.75l-.394-1.183a2.25 2.25 0 00-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 001.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 001.423 1.423l1.183.394-1.183.394a2.25 2.25 0 00-1.423 1.423z',
     to: '/services/ai-ml-integrations',
   },
+  {
+    title: 'Technology Consulting',
+    tagline: 'Strategic FinTech technology advisory for banks and financial institutions.',
+    desc: 'Recon FinTech Consultancy delivers strategic technology consulting covering architecture design, digital transformation strategy, cloud migration planning, technology stack evaluation, and regulatory technology roadmaps. Every engagement is led by certified architects with hands-on experience deploying mission-critical financial infrastructure at tier-1 banks across global markets.',
+    highlights: ['Technology architecture and digital transformation strategy', 'Cloud migration for regulated financial environments', 'Technology stack evaluation and vendor advisory', 'Regulatory technology (RegTech) roadmap development', 'API-first architecture for financial platforms', 'Microservices and event-driven system consulting', 'Legacy modernisation and migration planning', 'Scalability engineering for FinTech platforms', 'Fractional technology leadership for FinTech startups'],
+    icon: 'M9.75 3.75v3.75m0 0v3.75m0-3.75h3.75m-3.75 0H9.75m9 3.75a9 9 0 11-18 0 9 9 0 0118 0z',
+    to: '/services/tech-consulting',
+  },
+  {
+    title: 'SaaS Platform Engineering',
+    tagline: 'Multi-tenant SaaS infrastructure with compliance-ready architecture.',
+    desc: 'Recon FinTech Consultancy provides end-to-end SaaS platform engineering for financial services companies building subscription-based products. We architect scalable multi-tenant infrastructure with tenant isolation, usage metering, subscription lifecycle management, and compliance-ready data segregation for platforms serving millions of users in regulated financial environments.',
+    highlights: ['Multi-tenant SaaS architecture design', 'Subscription lifecycle management and billing', 'Tenant isolation and data segregation compliance', 'Usage metering and consumption-based pricing', 'SaaS security with SSO, RBAC, and encryption', 'API gateway and developer portal engineering', 'CI/CD and infrastructure-as-code for SaaS', 'SaaS metrics (MRR, churn, LTV, CAC) dashboards', 'Self-service onboarding and customer portals'],
+    icon: 'M2.25 15a4.5 4.5 0 004.5 4.5H18a3.75 3.75 0 001.332-7.257 3 3 0 00-3.758-3.848 5.25 5.25 0 00-10.233 2.33A4.502 4.502 0 002.25 15z',
+    to: '/services/saas-engineering',
+  },
+  {
+    title: 'Software Development',
+    tagline: 'Custom financial software with TDD, CI/CD, and regulatory-grade security.',
+    desc: 'Recon FinTech Consultancy delivers custom software development for reconciliation platforms, compliance engines, and payment infrastructure. Our teams build production-ready financial systems using modern frameworks, test-driven development, and automated CI/CD pipelines for high-throughput transaction processing, real-time data pipelines, and regulatory reporting platforms.',
+    highlights: ['Custom backend for financial transaction processing', 'Real-time data pipeline and event stream engineering', 'RESTful and GraphQL API for financial platforms', 'Regulatory reporting system development', 'Reconciliation engine software engineering', 'Financial data warehousing and analytics platforms', 'Payment gateway integration and custom connectors', 'Automated CI/CD and DevSecOps implementation', 'Secure coding and OWASP-compliant development'],
+    icon: 'M6.75 7.5l3 2.25-3 2.25m4.5 0h3m-9 9h13.5A2.25 2.25 0 0021 18.75V5.25A2.25 2.25 0 0018.75 3H5.25A2.25 2.25 0 003 5.25v13.5A2.25 2.25 0 005.25 21z',
+    to: '/services/software-development',
+  },
+  {
+    title: 'Technology Development',
+    tagline: 'Cloud-native infrastructure, DevOps, and platform engineering for finance.',
+    desc: 'Recon FinTech Consultancy offers technology development covering the full lifecycle of financial infrastructure delivery. From cloud-native architecture and Kubernetes orchestration to API gateway engineering and SRE, we build the critical infrastructure powering modern financial operations processing billions in daily transaction volume across jurisdictions.',
+    highlights: ['Cloud-native infrastructure on AWS, Azure, GCP', 'Kubernetes and container orchestration', 'Infrastructure-as-code with Terraform and Pulumi', 'Observability platform with logging, metrics, tracing', 'Site reliability engineering for financial systems', 'API gateway and service mesh architecture', 'Database engineering for financial data storage', 'Disaster recovery and business continuity planning', 'Multi-region deployment for global financial services'],
+    icon: 'M14.25 9.75L16.5 12l-2.25 2.25m-4.5 0L7.5 12l2.25-2.25M6 20.25h12A2.25 2.25 0 0020.25 18V6A2.25 2.25 0 0018 3.75H6A2.25 2.25 0 003.75 6v12A2.25 2.25 0 006 20.25z',
+    to: '/services/tech-development',
+  },
+  {
+    title: 'Payment Aggregator Services',
+    tagline: 'Multi-channel payment aggregation with real-time settlement and reconciliation.',
+    desc: 'Recon FinTech Consultancy is building a comprehensive payment aggregation platform currently under regulatory approval. Our PA infrastructure will support UPI, cards, net banking, and wallets through a single API with seamless integration, real-time settlement, automated reconciliation, and PCI DSS-compliant infrastructure for high-volume transaction processing in India and emerging markets.',
+    highlights: ['Multi-channel payment via single unified API', 'UPI, cards, net banking, and wallet support', 'Real-time settlement and automated reconciliation', 'PCI DSS Level 1 compliant infrastructure', 'Seamless REST API and SDK integration', 'Smart transaction routing for optimal success rates', 'Automated merchant onboarding and KYC workflows', 'Subscription and recurring payment management', 'Marketplace payment splitting and sub-merchant settlement'],
+    icon: 'M2.25 8.25h19.5M2.25 9h19.5m-16.5 5.25h6m-6 2.25h3m-3.75 3h15a2.25 2.25 0 002.25-2.25V6.75A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25v10.5A2.25 2.25 0 004.5 19.5z',
+    to: '/services/payment-aggregator',
+  },
+  {
+    title: 'AEPS — Aadhaar Enabled Payment System',
+    tagline: 'NPCI-certified biometric payment infrastructure for financial inclusion.',
+    desc: 'Recon FinTech Consultancy provides enterprise-grade AEPS solutions for banks and FinTech platforms delivering secure biometric-authenticated financial services across India. Supporting cash withdrawal, balance enquiry, fund transfer, and Aadhaar-to-Aadhaar payments through NPCI-certified channels with end-to-end encryption and full regulatory compliance.',
+    highlights: ['NPCI-certified AEPS transaction processing', 'Biometric authentication via Aadhaar fingerprint/iris', 'Cash withdrawal and deposit via micro-ATM devices', 'Real-time balance enquiry and mini statement', 'Aadhaar-to-Aadhaar fund transfer with instant settlement', 'Merchant onboarding and AEPS agent network management', 'End-to-end encryption and biometric data security', 'Interoperable AEPS integration with banking partners', 'Transaction reconciliation for AEPS payment flows'],
+    icon: 'M15.75 5.25a3 3 0 013 3m3 0a6 6 0 01-7.029 5.912c-.563-.097-1.159.026-1.563.43L10.5 17.25H8.25v2.25H6v2.25H2.25v-2.818c0-.597.237-1.17.659-1.591l6.499-6.499c.404-.404.527-1 .43-1.563A6 6 0 1121.75 8.25z',
+    to: '/services/aeps',
+  },
 ]
 
 export default function Services() {
@@ -89,21 +137,22 @@ export default function Services() {
     <>
       <Helmet>
         <title>Enterprise FinTech Services — Recon FinTech Consultancy | Reconciliation, Web, Mobile, IoT, AI</title>
-        <meta name="description" content="Recon FinTech Consultancy delivers 10 enterprise FinTech services: automated reconciliation, compliance auditing, multi-payment reconciliation, cross-border settlement, web development, mobile app development, IoT integration, AI/ML integration, ledger analytics, and cybersecurity advisory. Top FinTech consultancy in India." />
-        <meta name="keywords" content="Recon FinTech Consultancy services, automated transaction reconciliation systems, FinTech compliance data auditing, multi-payment gateway reconciliation services, cross-border financial settlement consultancy, web development for FinTech, mobile app development financial services, IoT financial infrastructure integration, AI ML integration FinTech, AI-driven ledger matching software, B2B financial data consulting agency" />
+        <meta name="description" content="Recon FinTech Consultancy delivers 16 enterprise FinTech services: automated reconciliation, compliance auditing, multi-payment reconciliation, cross-border settlement, technology consulting, SaaS engineering, software development, payment aggregation, AEPS, web, mobile, IoT, AI/ML, ledger analytics, and cybersecurity advisory. Top FinTech consultancy in India." />
+        <meta name="keywords" content="Recon FinTech Consultancy services, automated transaction reconciliation systems, FinTech compliance data auditing, multi-payment gateway reconciliation services, cross-border financial settlement consultancy, technology consulting FinTech, SaaS platform engineering, software development FinTech, payment aggregator services, AEPS Aadhaar payment system, web development for FinTech, mobile app development financial services, IoT financial infrastructure integration, AI ML integration FinTech, AI-driven ledger matching software, B2B financial data consulting agency" />
       </Helmet>
 
       <section className="section-container pt-12 md:pt-16 lg:pt-20 xl:pt-24">
         <span className="eyebrow-label">Recon FinTech Services</span>
         <h1 className="display-heading mt-3 max-w-4xl text-4xl leading-[1.05] sm:text-5xl xl:text-6xl">
-          Enterprise <span className="text-primary">FinTech Services</span> — Reconciliation, Web, Mobile, IoT &amp; AI
+          Enterprise <span className="text-primary">FinTech Services</span> — Reconciliation, Technology, Payments &amp; Infrastructure
         </h1>
         <p className="mt-6 max-w-2xl text-base leading-relaxed text-body sm:text-lg">
-          Recon FinTech Consultancy delivers 10 integrated enterprise service lines spanning automated
+          Recon FinTech Consultancy delivers 16 integrated enterprise service lines spanning automated
           transaction reconciliation, FinTech compliance data auditing, multi-payment gateway reconciliation,
-          cross-border settlement architecture, web development, mobile app development, IoT integration,
-          AI/ML integration, ledger analytics, and cybersecurity advisory. Every engagement is staffed with
-          certified architects and domain experts from tier-1 financial institutions.
+          cross-border settlement architecture, technology consulting, SaaS platform engineering, software
+          development, technology development, payment aggregation, AEPS, web development, mobile app
+          development, IoT integration, AI/ML integration, ledger analytics, and cybersecurity advisory.
+          Every engagement is staffed with certified architects and domain experts from tier-1 financial institutions.
         </p>
       </section>
 
