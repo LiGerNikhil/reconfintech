@@ -1,10 +1,10 @@
 import { useState } from 'react'
 import { Helmet } from 'react-helmet-async'
 
-const officeHours = 'Mon–Fri, 9:00 AM – 6:00 PM EST'
-const phone = '+91 87964 67671'
+const officeHours = 'Monï¿½Fri, 9:00 AM ï¿½ 6:00 PM EST'
+const phone = '+91 99114 44938'
 const email = 'hello@reconfintech.com'
-const waLink = 'https://wa.me/918796467671'
+const waLink = 'https://wa.me/919911444938'
 
 export default function Contact() {
   const [form, setForm] = useState({ firstName: '', lastName: '', email: '', company: '', interest: '', message: '' })
@@ -23,12 +23,12 @@ export default function Contact() {
       `*Interest:* ${form.interest || 'N/A'}\n` +
       `*Message:* ${form.message}`
     )
-    window.open(`https://wa.me/918796467671?text=${msg}`, '_blank', 'noopener,noreferrer')
+    window.open(`https://wa.me/919911444938?text=${msg}`, '_blank', 'noopener,noreferrer')
   }
   return (
     <>
       <Helmet>
-        <title>Contact Us — reconfintech.com</title>
+        <title>Contact Us ï¿½ reconfintech.com</title>
         <meta name="description" content="Get in touch with reconfintech.com. Schedule a consultation with our FinTech advisory team." />
       </Helmet>
 
