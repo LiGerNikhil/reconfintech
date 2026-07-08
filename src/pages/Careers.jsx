@@ -70,7 +70,7 @@ export default function Careers() {
         </div>
         <p className="mt-6 text-center text-sm text-body/70">
           Dont see a role that fits?{' '}
-          <a href="mailto:hello@reconfintechconsultancy.com" className="text-primary hover:text-primary-dark">Send us your CV</a>
+          <a href="mailto:hello@reconfintech.com" className="text-primary hover:text-primary-dark">Send us your CV</a>
         </p>
       </section>
     </>

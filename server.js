@@ -33,5 +33,5 @@ app.get('*', async (_req, res) => {
 })
 
 app.listen(PORT, '0.0.0.0', () => {
-  console.log(`reconfintechconsultancy.com — live on http://0.0.0.0:${PORT}`)
+  console.log(`reconfintech.com — live on http://0.0.0.0:${PORT}`)
 })

@@ -5,7 +5,7 @@ export default function NotFound() {
   return (
     <>
       <Helmet>
-        <title>404 — Page Not Found | reconfintechconsultancy.com</title>
+        <title>404 — Page Not Found | reconfintech.com</title>
       </Helmet>
       <section className="section-container flex min-h-[60vh] flex-col items-center justify-center py-24 text-center">
         <span className="text-8xl font-extrabold tracking-tight text-primary/20">404</span>

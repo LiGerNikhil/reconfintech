@@ -1,4 +1,4 @@
-// PM2 ecosystem file for reconfintechconsultancy.com
+// PM2 ecosystem file for reconfintech.com
 // Usage: pm2 start ecosystem.config.cjs
 module.exports = {
   apps: [{

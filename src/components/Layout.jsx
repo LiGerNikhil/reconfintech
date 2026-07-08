@@ -109,7 +109,7 @@ export default function Layout() {
       <header className="sticky top-0 z-40 border-b border-border-soft bg-surface/90 backdrop-blur-md">
         <div className="section-container flex h-16 items-center justify-between lg:h-[72px]">
           <NavLink to="/" className="flex shrink-0 items-center">
-            <img src="/assets/images/logo.png" alt="reconfintechconsultancy.com" className="h-10 w-auto sm:h-14 md:h-[72px]" />
+            <img src="/assets/images/logo.png" alt="reconfintech.com" className="h-10 w-auto sm:h-14 md:h-[72px]" />
           </NavLink>
 
           <nav aria-label="Primary" className="hidden lg:flex lg:items-center lg:gap-10">
@@ -327,7 +327,7 @@ export default function Layout() {
                 banks and neo-challenger platforms worldwide.
               </p>
               <div className="mt-6 flex items-center gap-4">
-                <a href="mailto:hello@reconfintechconsultancy.com" className="text-white/40 transition-colors hover:text-white" aria-label="Email">
+                <a href="mailto:hello@reconfintech.com" className="text-white/40 transition-colors hover:text-white" aria-label="Email">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="h-5 w-5"><path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" /></svg>
                 </a>
                 <a href="https://wa.me/918796467671" target="_blank" rel="noopener noreferrer" className="text-white/40 transition-colors hover:text-white" aria-label="WhatsApp">
@@ -397,7 +397,7 @@ export default function Layout() {
           </div>
 
           <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-white/5 pt-6 sm:flex-row">
-            <p className="text-xs text-white/30">&copy; 2026 reconfintechconsultancy.com. All rights reserved.</p>
+            <p className="text-xs text-white/30">&copy; 2026 reconfintech.com. All rights reserved.</p>
             <div className="flex items-center gap-4 text-xs text-white/30">
               <NavLink to="/privacy" className="transition-colors duration-150 hover:text-white/60">Privacy</NavLink>
               <span aria-hidden="true" className="text-white/10">|</span>

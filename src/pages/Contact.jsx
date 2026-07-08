@@ -1,9 +1,9 @@
-ï»¿import { useState } from 'react'
+import { useState } from 'react'
 import { Helmet } from 'react-helmet-async'
 
-const officeHours = 'Monâ€“Fri, 9:00 AM â€“ 6:00 PM EST'
+const officeHours = 'Mon–Fri, 9:00 AM – 6:00 PM EST'
 const phone = '+91 87964 67671'
-const email = 'hello@reconfintechconsultancy.com'
+const email = 'hello@reconfintech.com'
 const waLink = 'https://wa.me/918796467671'
 
 export default function Contact() {
@@ -16,7 +16,7 @@ export default function Contact() {
   function handleSubmit(e) {
     e.preventDefault()
     const msg = encodeURIComponent(
-      `*New Inquiry from reconfintechconsultancy.com*\n\n` +
+      `*New Inquiry from reconfintech.com*\n\n` +
       `*Name:* ${form.firstName} ${form.lastName}\n` +
       `*Email:* ${form.email}\n` +
       `*Company:* ${form.company || 'N/A'}\n` +
@@ -28,8 +28,8 @@ export default function Contact() {
   return (
     <>
       <Helmet>
-        <title>Contact Us â€” reconfintechconsultancy.com</title>
-        <meta name="description" content="Get in touch with reconfintechconsultancy.com. Schedule a consultation with our FinTech advisory team." />
+        <title>Contact Us — reconfintech.com</title>
+        <meta name="description" content="Get in touch with reconfintech.com. Schedule a consultation with our FinTech advisory team." />
       </Helmet>
 
       <section className="section-container pt-12 md:pt-16 lg:pt-20 xl:pt-24">

@@ -1,6 +1,6 @@
 /*
  * =============================================================================
- *  BREAKPOINT STRATEGY — reconfintechconsultancy.com
+ *  BREAKPOINT STRATEGY — reconfintech.com
  * =============================================================================
  *  This project follows a **mobile-first** responsive methodology.
  *  Every component is designed for the smallest viewport first, then

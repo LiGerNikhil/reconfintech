@@ -1,5 +1,5 @@
 /*
- * main.js — reconfintechconsultancy.com
+ * main.js — reconfintech.com
  *
  * Navigation controller: desktop dropdown, mobile dock active states,
  * bottom-sheet drawer, scroll-lock, and global drawer state.
