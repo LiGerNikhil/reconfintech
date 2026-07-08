@@ -1,8 +1,21 @@
 import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
+import { useState, useEffect, useCallback } from 'react'
 import RevealOnScroll from '../components/RevealOnScroll'
 import NewServicesSection from '../components/NewServicesSection'
 import CoreCapabilities from '../components/CoreCapabilities'
+
+const heroImages = [
+  'https://media.istockphoto.com/id/1081869356/photo/taking-on-the-late-shift-with-true-dedication.jpg?s=612x612&w=0&k=20&c=6cd0XCc7SXbwh3gDTDgg7yjljBPbW8gAmUUmDCQqs9E=',
+  'https://media.istockphoto.com/id/1849966331/vector/cpu-chip-on-motherboard-central-computer-processors-cpu-concept-quantum-computer-large-data.jpg?s=612x612&w=0&k=20&c=gwnDW37MfXMJn7M4XOUgQxWcDr5W62YXfQ1k6MBn4qI=',
+  'https://media.istockphoto.com/id/1872098738/vector/artificial-intelligence-line-editable-icons-set.jpg?s=612x612&w=0&k=20&c=UEUjHcPwf5mewV8nhO-1pVX_Xcxvc8xXAdUhmZJC6CQ=',
+  'https://media.istockphoto.com/id/2183468112/photo/two-professionals-in-formal-attire-examine-and-interact-with-flowing-digital-wave-on-colorful.jpg?s=612x612&w=0&k=20&c=zpHMGrzPVODgXRB9stnqJCG6sJURqIimrBy_7yqrfAE=',
+  'https://media.istockphoto.com/id/2149530993/photo/digital-human-head-concept-for-ai-metaverse-and-facial-recognition-technology.jpg?s=612x612&w=0&k=20&c=IduORJUs1c1s0m2SXQANsK8IUhtlz8QApsLxNYOYrXQ=',
+  'https://media.istockphoto.com/id/852497864/photo/fintech-concept.jpg?s=612x612&w=0&k=20&c=S6mqWkM5kvzxRbJrK-cLbm7YOuYjMIhiEG2DvYiShQo=',
+  'https://media.istockphoto.com/id/1283432364/photo/financial-graph-and-technology-element-on-mobile-phone-3d-rendering.jpg?s=612x612&w=0&k=20&c=o8rbcJqCgx-4rXWWe444p9N3KLW9aTHgYbgC2L8FF8o=',
+  'https://media.istockphoto.com/id/1019729218/photo/financal-technology-concept-fintech.jpg?s=612x612&w=0&k=20&c=t8Cvm2Z5t14vVLutAAiLuHlPfpRLk_tkL9AXfpj4G-g=',
+  'https://media.istockphoto.com/id/852000444/photo/fintech-word-on-digital-virtual-screen-with-two-businessman-hands-holding-smartphones.jpg?s=612x612&w=0&k=20&c=2ui4ZGi1nYcTKd3l_CEkvNzkXAqVMYoQz9ytfvOF3hU',
+]
 
 const featuredServices = [
   {
@@ -64,6 +77,17 @@ const featuredServices = [
 ]
 
 export default function Home() {
+  const [active, setActive] = useState(0)
+
+  const next = useCallback(() => {
+    setActive((prev) => (prev + 1) % heroImages.length)
+  }, [])
+
+  useEffect(() => {
+    const t = setInterval(next, 3000)
+    return () => clearInterval(t)
+  }, [next])
+
   return (
     <>
       <Helmet>
@@ -75,8 +99,8 @@ export default function Home() {
       {/* HERO */}
       <RevealOnScroll>
         <section aria-labelledby="hero-heading" className="section-container overflow-hidden pt-12 md:pt-16 lg:pt-20 xl:pt-24">
-        <div className="grid items-center gap-12 lg:grid-cols-[6fr_4fr] lg:gap-16">
-          <div className="flex flex-col gap-8">
+        <div className="grid items-center gap-12 lg:grid-cols-[1fr_1fr] lg:gap-16">
+          <div className="order-2 flex flex-col gap-8 lg:order-1">
             <span className="eyebrow-label">Recon FinTech Consultancy — Automated Reconciliation &amp; Compliance</span>
             <h1 id="hero-heading" className="display-heading text-4xl leading-[1.05] sm:text-5xl xl:text-6xl">
               Financial Reconciliation,<br />
@@ -108,42 +132,33 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="relative flex items-center justify-center lg:justify-start">
-            <div aria-hidden="true" className="hero-blob -top-10 right-0 h-[420px] w-[420px] max-sm:-right-10 max-sm:h-[300px] max-sm:w-[300px]" />
-            <div className="hero-widget relative w-full max-w-md rounded-2xl border border-border-soft bg-surface p-6 shadow-soft sm:p-8">
-              <div className="mb-5 flex items-center gap-3">
-                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="h-5 w-5" aria-hidden="true">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 3v11.25A2.25 2.25 0 006 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0118 16.5h-2.25m-7.5 0h7.5m-7.5 0l-1 3m8.5-3l1 3m0 0l.5 1.5m-.5-1.5h-9.5m0 0l-.5 1.5M9 11.25v1.5M12 9v3.75m3-6v6" />
-                  </svg>
-                </span>
-                <div>
-                  <span className="block text-sm font-bold text-ink">Executive Briefing</span>
-                  <span className="block text-xs text-body">Automated Reconciliation Market Outlook 2026</span>
-                </div>
-              </div>
-              <div className="space-y-4">
-                {[
-                  ['AI-Driven Ledger Matching', 'Real-time anomaly detection across 50M+ daily transactions'],
-                  ['Multi-Gateway Consolidation', 'Unified reconciliation across 50+ global payment acquirers'],
-                  ['Regulatory Compliance', 'SOC 2, ISO 27001 &amp; GDPR certified audit infrastructure'],
-                ].map(([title, desc]) => (
-                  <div key={title} className="flex items-start gap-3">
-                    <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-emerald-100 text-emerald-700">
-                      <svg viewBox="0 0 20 20" fill="currentColor" className="h-3 w-3" aria-hidden="true"><path fillRule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clipRule="evenodd" /></svg>
-                    </span>
-                    <div>
-                      <span className="block text-sm font-semibold text-ink">{title}</span>
-                      <span className="block text-xs text-body/80" dangerouslySetInnerHTML={{ __html: desc }} />
-                    </div>
-                  </div>
+          {/* Slideshow — top on mobile, right on desktop */}
+          <div className="relative order-1 lg:order-2">
+            <div className="relative mx-auto w-full overflow-hidden rounded-2xl bg-gradient-to-br from-gray-50 to-surface-soft shadow-lg ring-1 ring-black/5">
+              <div className="relative flex h-[280px] items-center justify-center sm:h-[340px] lg:h-[420px] xl:h-[500px]">
+                {heroImages.map((src, i) => (
+                  <img
+                    key={src}
+                    src={src}
+                    alt=""
+                    aria-hidden="true"
+                    className={`pointer-events-none absolute max-h-full max-w-full rounded-lg object-contain transition-opacity duration-700 ${i === active ? 'opacity-100' : 'opacity-0'}`}
+                  />
                 ))}
               </div>
-              <div className="mt-6 flex items-center justify-between">
-                <span className="h-px flex-1 bg-gradient-to-r from-primary/30 via-primary/10 to-transparent" aria-hidden="true" />
-                <Link to="/contact" className="ml-4 shrink-0 text-xs font-semibold text-primary transition-colors hover:text-primary-dark">
-                  Schedule an Audit&nbsp;&rarr;
-                </Link>
+              {/* Gradient fade + pips */}
+              <div className="absolute inset-x-0 bottom-0 flex items-end justify-center bg-gradient-to-t from-black/40 via-black/10 to-transparent pb-3 pt-12">
+                <div className="flex gap-2">
+                  {heroImages.map((_, i) => (
+                    <button
+                      key={i}
+                      type="button"
+                      aria-label={`Slide ${i + 1} of ${heroImages.length}`}
+                      onClick={() => setActive(i)}
+                      className={`h-2 rounded-full transition-all duration-300 ${i === active ? 'w-6 bg-white' : 'w-2 bg-white/60 hover:bg-white/90'}`}
+                    />
+                  ))}
+                </div>
               </div>
             </div>
           </div>
@@ -181,6 +196,13 @@ export default function Home() {
       <RevealOnScroll>
       <section className="section-container py-16 md:py-20 lg:py-24" aria-labelledby="cta-heading">
         <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-[#0052FF] to-[#0033AA] px-8 py-14 text-center shadow-mid sm:rounded-3xl sm:px-14 sm:py-20 lg:px-20">
+          <img
+            src="https://media.istockphoto.com/id/1081869356/photo/taking-on-the-late-shift-with-true-dedication.jpg?s=612x612&w=0&k=20&c=6cd0XCc7SXbwh3gDTDgg7yjljBPbW8gAmUUmDCQqs9E="
+            alt=""
+            aria-hidden="true"
+            className="pointer-events-none absolute inset-0 h-full w-full object-cover opacity-40"
+          />
+          <div aria-hidden="true" className="pointer-events-none absolute inset-0 bg-gradient-to-tr from-[#0033AA]/60 to-transparent" />
           <div aria-hidden="true" className="pointer-events-none absolute -right-20 -top-20 h-80 w-80 rounded-full bg-white/[0.06] blur-2xl" />
           <div aria-hidden="true" className="pointer-events-none absolute -bottom-16 -left-16 h-60 w-60 rounded-full bg-white/[0.04] blur-2xl" />
           <div aria-hidden="true" className="pointer-events-none absolute -left-8 top-1/3 h-40 w-40 rounded-full bg-white/[0.03] blur-xl" />

@@ -214,7 +214,7 @@ export default function CoreCapabilities() {
   return (
     <section
       aria-labelledby="cc-heading"
-      className="overflow-hidden bg-gradient-to-br from-[#0B1428] via-[#0f1a33] to-[#0B1428] py-20 sm:py-28"
+      className="relative overflow-hidden bg-gradient-to-br from-[#0B1428] via-[#0f1a33] to-[#0B1428] py-20 sm:py-28"
     >
       <div className="section-container">
         {/* Heading */}
@@ -242,6 +242,36 @@ export default function CoreCapabilities() {
             Enterprise software engineering, financial automation, AI solutions, and digital
             infrastructure built for modern financial institutions and FinTech platforms worldwide.
           </p>
+        </motion.div>
+
+        {/* Image row */}
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-40px' }}
+          transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1] }}
+          className="mb-12 grid gap-4 sm:grid-cols-2 sm:gap-5 lg:grid-cols-4"
+        >
+          <img
+            src="https://media.istockphoto.com/id/1849966331/vector/cpu-chip-on-motherboard-central-computer-processors-cpu-concept-quantum-computer-large-data.jpg?s=612x612&w=0&k=20&c=gwnDW37MfXMJn7M4XOUgQxWcDr5W62YXfQ1k6MBn4qI="
+            alt="CPU processor technology"
+            className="h-44 w-full rounded-xl object-cover shadow-lg ring-1 ring-white/10 sm:h-48"
+          />
+          <img
+            src="https://media.istockphoto.com/id/1872098738/vector/artificial-intelligence-line-editable-icons-set.jpg?s=612x612&w=0&k=20&c=UEUjHcPwf5mewV8nhO-1pVX_Xcxvc8xXAdUhmZJC6CQ="
+            alt="AI technology icons"
+            className="h-44 w-full rounded-xl object-cover shadow-lg ring-1 ring-white/10 sm:h-48"
+          />
+          <img
+            src="https://media.istockphoto.com/id/2149530993/photo/digital-human-head-concept-for-ai-metaverse-and-facial-recognition-technology.jpg?s=612x612&w=0&k=20&c=IduORJUs1c1s0m2SXQANsK8IUhtlz8QApsLxNYOYrXQ="
+            alt="AI digital human concept"
+            className="h-44 w-full rounded-xl object-cover shadow-lg ring-1 ring-white/10 sm:h-48"
+          />
+          <img
+            src="https://media.istockphoto.com/id/1019729218/photo/financal-technology-concept-fintech.jpg?s=612x612&w=0&k=20&c=t8Cvm2Z5t14vVLutAAiLuHlPfpRLk_tkL9AXfpj4G-g="
+            alt="Financial technology concept"
+            className="h-44 w-full rounded-xl object-cover shadow-lg ring-1 ring-white/10 sm:h-48"
+          />
         </motion.div>
 
         {/* Cards grid */}

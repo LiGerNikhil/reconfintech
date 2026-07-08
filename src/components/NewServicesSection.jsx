@@ -27,7 +27,14 @@ export default function NewServicesSection() {
   return (
     <>
       {/* ===== TECHNOLOGY SOLUTIONS — Bento Glassmorphism ===== */}
-      <section className="overflow-hidden bg-gradient-to-br from-[#0B1428] via-[#111D3A] to-[#0B1428] py-20 sm:py-28">
+      <section className="relative overflow-hidden bg-gradient-to-br from-[#0B1428] via-[#111D3A] to-[#0B1428] py-20 sm:py-28">
+        <div className="absolute -right-6 top-6 hidden h-[260px] w-[340px] overflow-hidden rounded-xl shadow-lg ring-1 ring-white/10 lg:block">
+          <img
+            src="https://media.istockphoto.com/id/2183468112/photo/two-professionals-in-formal-attire-examine-and-interact-with-flowing-digital-wave-on-colorful.jpg?s=612x612&w=0&k=20&c=zpHMGrzPVODgXRB9stnqJCG6sJURqIimrBy_7yqrfAE="
+            alt="Technology professionals"
+            className="h-full w-full object-cover"
+          />
+        </div>
         <div className="section-container">
           <div className="mx-auto mb-14 max-w-2xl text-center sm:mb-20">
             <span className="inline-block rounded-full border border-white/10 bg-white/[0.04] px-4 py-1.5 text-[11px] font-semibold uppercase tracking-[0.15em] text-[#6B8AFF]">
@@ -93,6 +100,13 @@ export default function NewServicesSection() {
 
       {/* ===== FINANCIAL SOLUTIONS — Floating Gradient Cards ===== */}
       <section className="relative overflow-hidden bg-gradient-to-br from-[#F8FAFF] via-white to-[#F5F0FF] py-20 sm:py-28">
+        <div className="absolute -left-4 top-6 hidden h-[200px] w-[260px] overflow-hidden rounded-xl shadow-md ring-1 ring-black/5 lg:block">
+          <img
+            src="https://media.istockphoto.com/id/1283432364/photo/financial-graph-and-technology-element-on-mobile-phone-3d-rendering.jpg?s=612x612&w=0&k=20&c=o8rbcJqCgx-4rXWWe444p9N3KLW9aTHgYbgC2L8FF8o="
+            alt="Financial mobile analytics"
+            className="h-full w-full object-cover"
+          />
+        </div>
         <div aria-hidden="true" className="pointer-events-none absolute -right-40 -top-40 h-[500px] w-[500px] rounded-full bg-[#6B8AFF]/5 blur-3xl" />
         <div aria-hidden="true" className="pointer-events-none absolute -bottom-40 -left-40 h-[400px] w-[400px] rounded-full bg-[#A78BFA]/5 blur-3xl" />
 
