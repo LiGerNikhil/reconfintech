@@ -58,47 +58,50 @@ export default function ApiDetail() {
       </div>
 
       {/* Terminal Hero */}
-      <section className="section-container pb-8 pt-6 md:pb-12 md:pt-8">
-        <div className="grid items-start gap-10 lg:grid-cols-[1fr_1fr] lg:gap-14">
+      <section className="section-container pb-8 pt-5 md:pb-12 md:pt-8">
+        <div className="flex flex-col gap-8 lg:grid lg:grid-cols-[1fr_1fr] lg:gap-14">
+          {/* Terminal — first on mobile, right on desktop */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.1, ease: [0.25, 0.1, 0.25, 1] }}
+            className="order-1 lg:order-2"
+          >
+            <div className="overflow-hidden rounded-xl border border-border-soft bg-[#0B1428] shadow-soft">
+              <div className="flex items-center gap-1.5 border-b border-white/5 px-3 py-2 sm:gap-2 sm:px-4 sm:py-2.5">
+                <span className="h-2 w-2 shrink-0 rounded-full bg-red-400" />
+                <span className="h-2 w-2 shrink-0 rounded-full bg-yellow-400" />
+                <span className="h-2 w-2 shrink-0 rounded-full bg-emerald-400" />
+                <span className="ml-2 truncate text-[10px] font-mono text-white/30 sm:text-xs">api.reconfintech.com</span>
+              </div>
+              <div className="overflow-x-auto p-3 font-mono text-[10px] leading-relaxed text-white/70 sm:p-4 sm:text-xs">
+                <pre className="overflow-x-auto whitespace-pre">
+                  <code><span className="text-emerald-400">$</span> <span className="text-white/80">{api.endpoint.split('\n')[0]}</span></code>
+                </pre>
+                <div className="mt-2 text-white/50 sm:mt-3">&gt; Response:</div>
+                <pre className="mt-1 overflow-x-auto text-white/80"><code>{JSON.stringify(api.response, null, 2)}</code></pre>
+              </div>
+            </div>
+          </motion.div>
+
+          {/* Text — second on mobile, left on desktop */}
           <motion.div
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1] }}
+            className="order-2 lg:order-1"
           >
-            <div className="flex items-center gap-3">
-              <h1 className="text-3xl font-extrabold tracking-tight text-ink sm:text-4xl">{api.title}</h1>
+            <div className="flex flex-wrap items-center gap-2 sm:gap-3">
+              <h1 className="text-xl font-extrabold tracking-tight text-ink sm:text-2xl md:text-3xl lg:text-4xl">{api.title}</h1>
               {api.badge && (
-                <span className={`shrink-0 rounded-full px-3 py-0.5 text-xs font-semibold ${badgeColors[api.badge]}`}>{api.badge}</span>
+                <span className={`rounded-full px-2 py-0.5 text-[10px] font-semibold sm:text-xs ${badgeColors[api.badge]}`}>{api.badge}</span>
               )}
             </div>
-            <p className="mt-3 text-base leading-relaxed text-body sm:text-lg">{api.subtitle}</p>
-            <div className="mt-6 flex flex-wrap gap-2">
+            <p className="mt-2 text-sm leading-relaxed text-body sm:text-base lg:text-lg">{api.subtitle}</p>
+            <div className="mt-4 flex flex-wrap gap-1.5 sm:mt-5 sm:gap-2">
               {api.features.slice(0, 4).map((f) => (
-                <span key={f.label} className="rounded-full border border-border-soft bg-surface-soft px-3 py-1 text-xs text-body">{f.label}: <span className="font-semibold text-ink">{f.value}</span></span>
+                <span key={f.label} className="rounded-full border border-border-soft bg-surface-soft px-2 py-1 text-[10px] text-body sm:px-2.5 sm:text-xs">{f.label}: <span className="font-semibold text-ink">{f.value}</span></span>
               ))}
-            </div>
-          </motion.div>
-
-          {/* Terminal window */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.15, ease: [0.25, 0.1, 0.25, 1] }}
-            className="overflow-hidden rounded-xl border border-border-soft bg-[#0B1428] shadow-soft"
-          >
-            <div className="flex items-center gap-2 border-b border-white/5 px-4 py-3">
-              <span className="h-3 w-3 rounded-full bg-red-400" />
-              <span className="h-3 w-3 rounded-full bg-yellow-400" />
-              <span className="h-3 w-3 rounded-full bg-emerald-400" />
-              <span className="ml-2 text-xs font-mono text-white/30">api.reconfintech.com</span>
-            </div>
-            <div className="p-4 font-mono text-xs leading-relaxed text-white/70 sm:text-sm">
-              <div className="flex">
-                <span className="text-emerald-400">$</span>
-                <span className="ml-2 text-white/80">{api.endpoint.split('\n')[0]}</span>
-              </div>
-              <div className="mt-3 text-white/50">&gt; Response:</div>
-              <pre className="mt-1 text-white/80">{JSON.stringify(api.response, null, 2)}</pre>
             </div>
           </motion.div>
         </div>
@@ -148,10 +151,10 @@ export default function ApiDetail() {
         </div>
 
         <div className="overflow-hidden rounded-xl border border-border-soft bg-[#0B1428]">
-          <div className="flex items-center justify-between border-b border-white/5 px-5 py-3">
-            <div className="flex items-center gap-2">
-              <span className="h-2.5 w-2.5 rounded-full bg-emerald-400" />
-              <span className="text-xs font-mono text-white/50">{api.endpoint.split(' ')[0]} {api.endpoint.split(' ')[1]}</span>
+          <div className="flex items-center justify-between border-b border-white/5 px-4 py-2.5 sm:px-5 sm:py-3">
+            <div className="flex min-w-0 items-center gap-2">
+              <span className="h-2 w-2 shrink-0 rounded-full bg-emerald-400 sm:h-2.5 sm:w-2.5" />
+              <span className="truncate text-[10px] font-mono text-white/50 sm:text-xs">{api.endpoint.split(' ')[0]} {api.endpoint.split(' ')[1]}</span>
             </div>
             <button
               type="button"
@@ -166,18 +169,18 @@ export default function ApiDetail() {
               )}
             </button>
           </div>
-          <pre className="max-h-96 overflow-auto p-5 font-mono text-xs leading-relaxed text-white/80 sm:text-sm"><code>{code}</code></pre>
+          <pre className="max-h-96 overflow-auto p-4 font-mono text-[10px] leading-relaxed text-white/80 sm:p-5 sm:text-sm"><code>{code}</code></pre>
         </div>
 
         {/* Response */}
         <div className="mt-4 overflow-hidden rounded-xl border border-border-soft bg-[#0B1428]">
-          <div className="flex items-center justify-between border-b border-white/5 px-5 py-3">
+          <div className="flex items-center justify-between border-b border-white/5 px-4 py-2.5 sm:px-5 sm:py-3">
             <div className="flex items-center gap-2">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="h-4 w-4 text-emerald-400"><path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-              <span className="text-xs font-mono text-white/50">Response — 200 OK</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="h-3.5 w-3.5 text-emerald-400 sm:h-4 sm:w-4"><path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+              <span className="text-[10px] font-mono text-white/50 sm:text-xs">Response — 200 OK</span>
             </div>
           </div>
-          <pre className="max-h-72 overflow-auto p-5 font-mono text-xs leading-relaxed text-white/80 sm:text-sm"><code>{JSON.stringify(api.response, null, 2)}</code></pre>
+          <pre className="max-h-72 overflow-auto p-4 font-mono text-[10px] leading-relaxed text-white/80 sm:p-5 sm:text-sm"><code>{JSON.stringify(api.response, null, 2)}</code></pre>
         </div>
       </section>
 
@@ -187,12 +190,12 @@ export default function ApiDetail() {
           <h2 className="mb-6 text-xl font-bold text-ink">Endpoints</h2>
           <div className="overflow-hidden rounded-xl border border-border-soft bg-surface">
             {api.endpoints.map((ep, i) => (
-              <div key={ep.path} className={`flex items-center gap-4 px-5 py-4 ${i < api.endpoints.length - 1 ? 'border-b border-border-soft' : ''}`}>
-                <span className={`shrink-0 rounded-md px-2.5 py-1 font-mono text-xs font-bold ${
+              <div key={ep.path} className={`flex flex-col gap-1.5 px-4 py-3 sm:flex-row sm:items-center sm:gap-4 sm:px-5 sm:py-4 ${i < api.endpoints.length - 1 ? 'border-b border-border-soft' : ''}`}>
+                <span className={`shrink-0 self-start rounded-md px-2 py-0.5 font-mono text-[11px] font-bold sm:self-auto sm:px-2.5 sm:py-1 sm:text-xs ${
                   ep.method === 'GET' ? 'bg-emerald-50 text-emerald-700' : 'bg-primary/10 text-primary'
                 }`}>{ep.method}</span>
-                <code className="flex-1 text-sm font-mono text-ink">{ep.path}</code>
-                <span className="text-xs text-body/70">{ep.desc}</span>
+                <code className="break-all text-sm font-mono text-ink sm:flex-1">{ep.path}</code>
+                <span className="text-xs text-body/70 sm:text-right">{ep.desc}</span>
               </div>
             ))}
           </div>

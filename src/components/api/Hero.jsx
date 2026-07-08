@@ -1,77 +1,71 @@
 import { motion } from 'framer-motion'
-import { Link } from 'react-router-dom'
+
+function scrollTo(id) {
+  const el = document.getElementById(id)
+  if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+}
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-surface-soft/80 via-surface to-surface pt-16 md:pt-20 lg:pt-24">
+    <section className="relative overflow-hidden bg-gradient-to-b from-surface-soft/80 via-surface to-surface pt-12 sm:pt-16 lg:pt-20">
       <div className="section-container relative z-10">
-        <div className="grid items-center gap-12 lg:grid-cols-[1fr_1fr] lg:gap-16">
+        <div className="flex flex-col gap-10 lg:grid lg:grid-cols-[1fr_1fr] lg:gap-16">
+          {/* Terminal — first on mobile, right on desktop */}
           <motion.div
-            initial={{ opacity: 0, y: 40 }}
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, delay: 0.1, ease: [0.25, 0.1, 0.25, 1] }}
+            className="order-1 lg:order-2"
+          >
+            <div className="overflow-hidden rounded-xl border border-border-soft bg-[#0B1428] shadow-soft">
+              <div className="flex items-center gap-1.5 border-b border-white/5 px-3 py-2 sm:gap-2 sm:px-4 sm:py-2.5">
+                <span className="h-2 w-2 shrink-0 rounded-full bg-red-400" />
+                <span className="h-2 w-2 shrink-0 rounded-full bg-yellow-400" />
+                <span className="h-2 w-2 shrink-0 rounded-full bg-emerald-400" />
+                <span className="ml-2 truncate text-[10px] font-mono text-white/30 sm:text-xs">api.reconfintech.com</span>
+              </div>
+              <div className="overflow-x-auto p-3 sm:p-4">
+                <pre className="overflow-x-auto whitespace-pre font-mono text-[10px] leading-relaxed text-white/70 sm:text-xs">
+                  <code>{`$ curl -X POST https://api.reconfintech.com/v2/reconciliation/transactions \\
+  -H "Authorization: Bearer YOUR_API_KEY" \\
+  -H "Content-Type: application/json" \\
+  -d '{"merchant_id": "MERCHANT_12345"}'`}</code>
+                </pre>
+                <div className="mt-2 border-t border-white/5 pt-2 sm:mt-3 sm:pt-3">
+                  <div className="flex items-center justify-between text-[10px] text-white/40 sm:text-xs">
+                    <span className="flex items-center gap-1.5">
+                      <span className="inline-block h-1.5 w-1.5 rounded-full bg-emerald-400" />
+                      Status: <span className="text-emerald-400">200 OK</span>
+                    </span>
+                    <span>0.82s</span>
+                  </div>
+                  <pre className="mt-2 overflow-x-auto font-mono text-[10px] leading-relaxed text-white/60 sm:text-xs">
+                    <code>{JSON.stringify({ success: true, request_id: 'REQ-839482', matched: 1812, exceptions: 27 }, null, 2)}</code>
+                  </pre>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+
+          {/* Text — second on mobile, left on desktop */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, ease: [0.25, 0.1, 0.25, 1] }}
-            className="flex flex-col gap-6"
+            className="order-2 flex flex-col gap-4 lg:order-1 lg:gap-6"
           >
             <span className="eyebrow-label">Recon FinTech API Platform</span>
-            <h1 className="display-heading text-4xl leading-[1.05] sm:text-5xl xl:text-6xl">
-              Enterprise APIs for the<br />
-              <span className="text-primary">Next Generation</span> of<br />
-              Financial Infrastructure
+            <h1 className="text-2xl font-extrabold leading-tight tracking-tight text-ink sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl">
+              Enterprise APIs for the Next Generation of <span className="text-primary">Financial Infrastructure</span>
             </h1>
-            <p className="max-w-[65ch] text-base leading-relaxed text-body sm:text-lg">
+            <p className="text-sm leading-relaxed text-body sm:text-base lg:text-lg">
               Recon FinTech provides secure, scalable APIs for payment reconciliation,
               compliance automation, settlements, banking integrations, and financial
               workflows. Built for enterprise-grade performance with 99.99% availability.
             </p>
-            <div className="flex flex-wrap gap-4 max-[400px]:flex-col">
-              <Link to="#api-categories" className="btn-primary max-[400px]:w-full">Explore APIs</Link>
-              <Link to="#api-docs" className="btn-secondary max-[400px]:w-full">View Documentation</Link>
-            </div>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.2, ease: [0.25, 0.1, 0.25, 1] }}
-            className="relative flex items-center justify-center"
-          >
-            <div className="relative w-full max-w-lg rounded-2xl border border-border-soft bg-surface p-5 shadow-soft sm:p-6">
-              <div className="mb-3 flex items-center gap-2">
-                <span className="h-3 w-3 rounded-full bg-red-400" />
-                <span className="h-3 w-3 rounded-full bg-yellow-400" />
-                <span className="h-3 w-3 rounded-full bg-emerald-400" />
-                <span className="ml-2 text-xs font-mono text-body/50">api.reconfintech.com</span>
-              </div>
-              <div className="space-y-2 font-mono text-xs sm:text-sm">
-                <div className="flex">
-                  <span className="text-emerald-500">$</span>
-                  <span className="ml-2 text-body/80">curl -X POST https://api.reconfintech.com/v2/reconciliation/transactions \</span>
-                </div>
-                <div className="flex">
-                  <span className="text-body/40">&nbsp;&nbsp;</span>
-                  <span className="text-body/80">-H <span className="text-yellow-500">&quot;Authorization: Bearer</span> <span className="text-primary">YOUR_API_KEY</span><span className="text-yellow-500">&quot;</span> \</span>
-                </div>
-                <div className="flex">
-                  <span className="text-body/40">&nbsp;&nbsp;</span>
-                  <span className="text-body/80">-H <span className="text-yellow-500">&quot;Content-Type: application/json&quot;</span> \</span>
-                </div>
-                <div className="flex">
-                  <span className="text-body/40">&nbsp;&nbsp;</span>
-                  <span className="text-body/80">-d <span className="text-yellow-500">&apos;{`{`}&quot;merchant_id&quot;: &quot;MERCHANT_12345&quot;{`}`}&apos;</span></span>
-                </div>
-                <div className="mt-3 border-t border-border-soft pt-3">
-                  <div className="flex items-center justify-between text-body/50">
-                    <span className="flex items-center gap-1.5">
-                      <span className="inline-block h-2 w-2 rounded-full bg-emerald-400" />
-                      Status: <span className="text-emerald-500">200 OK</span>
-                    </span>
-                    <span>0.82s</span>
-                  </div>
-                  <div className="mt-2 rounded-lg bg-ink/5 p-3">
-                    <pre className="text-[11px] leading-relaxed text-body/80 sm:text-xs">{JSON.stringify({ success: true, request_id: 'REQ-839482', matched: 1812, exceptions: 27 }, null, 2)}</pre>
-                  </div>
-                </div>
-              </div>
+            <div className="flex flex-col gap-3 min-[420px]:flex-row min-[420px]:gap-4">
+              <button type="button" onClick={() => scrollTo('api-categories')} className="btn-primary min-[420px]:inline-flex">Explore APIs</button>
+              <button type="button" onClick={() => scrollTo('api-docs')} className="btn-secondary min-[420px]:inline-flex">View Documentation</button>
             </div>
           </motion.div>
         </div>
