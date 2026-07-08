@@ -59,6 +59,7 @@ export default function Layout() {
   const navLinks = [
     { to: '/', label: 'Home' },
     { to: '/services', label: 'Services' },
+    { to: '/api-platform', label: 'API Platform' },
     { to: '/about', label: 'About' },
     { to: '/contact', label: 'Contact' },
   ]
@@ -372,6 +373,7 @@ export default function Layout() {
               <h3 className="mb-4 text-[11px] font-bold uppercase tracking-[0.15em] text-white/40">Company</h3>
               <ul className="space-y-2.5">
                 <li><NavLink to="/about" className="text-sm text-white/60 transition-colors duration-150 hover:text-white">About Us</NavLink></li>
+                <li><NavLink to="/api-platform" className="text-sm text-white/60 transition-colors duration-150 hover:text-white">API Platform</NavLink></li>
                 <li><NavLink to="/case-studies" className="text-sm text-white/60 transition-colors duration-150 hover:text-white">Case Studies</NavLink></li>
                 <li><NavLink to="/insights" className="text-sm text-white/60 transition-colors duration-150 hover:text-white">Insights</NavLink></li>
                 <li><NavLink to="/careers" className="text-sm text-white/60 transition-colors duration-150 hover:text-white">Careers</NavLink></li>
@@ -460,6 +462,7 @@ export default function Layout() {
         <h2 id="drawer-title" className="mb-5 text-lg font-bold text-ink">More</h2>
         <ul className="space-y-1">
           <li><NavLink to="/about" className="block rounded-lg px-3 py-2.5 text-sm font-medium text-body transition-colors duration-150 hover:bg-surface-soft hover:text-ink" onClick={closeDrawer}>About Us</NavLink></li>
+          <li><NavLink to="/api-platform" className="block rounded-lg px-3 py-2.5 text-sm font-medium text-body transition-colors duration-150 hover:bg-surface-soft hover:text-ink" onClick={closeDrawer}>API Platform</NavLink></li>
           <li><NavLink to="/case-studies" className="block rounded-lg px-3 py-2.5 text-sm font-medium text-body transition-colors duration-150 hover:bg-surface-soft hover:text-ink" onClick={closeDrawer}>Case Studies</NavLink></li>
           <li><NavLink to="/insights" className="block rounded-lg px-3 py-2.5 text-sm font-medium text-body transition-colors duration-150 hover:bg-surface-soft hover:text-ink" onClick={closeDrawer}>Insights</NavLink></li>
           <li><NavLink to="/careers" className="block rounded-lg px-3 py-2.5 text-sm font-medium text-body transition-colors duration-150 hover:bg-surface-soft hover:text-ink" onClick={closeDrawer}>Careers</NavLink></li>

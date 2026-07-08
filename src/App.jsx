@@ -4,6 +4,8 @@ import Home from './pages/Home'
 import About from './pages/About'
 import Services from './pages/Services'
 import ServiceDetail from './pages/ServiceDetail'
+import ApiPlatform from './pages/ApiPlatform'
+import ApiDetail from './pages/ApiDetail'
 import Contact from './pages/Contact'
 import CaseStudies from './pages/CaseStudies'
 import Insights from './pages/Insights'
@@ -22,6 +24,8 @@ export default function App() {
         <Route path="services" element={<Services />} />
         <Route path="services/:slug" element={<ServiceDetail />} />
         <Route path="contact" element={<Contact />} />
+        <Route path="api-platform" element={<ApiPlatform />} />
+        <Route path="api-platform/:slug" element={<ApiDetail />} />
         <Route path="case-studies" element={<CaseStudies />} />
         <Route path="insights" element={<Insights />} />
         <Route path="careers" element={<Careers />} />
