@@ -133,7 +133,7 @@ export default function ChatBot() {
             <p className="mb-2 font-semibold text-ink">Get in touch</p>
             <div className="flex flex-col gap-1.5">
               <a href={`tel:+91${waNumber}`} className="rounded-lg bg-white px-3 py-2 text-sm font-medium text-primary transition-colors hover:bg-primary/5">📞 +91 99114 44938</a>
-              <a href={`mailto:hello@reconfintech.com`} className="rounded-lg bg-white px-3 py-2 text-sm font-medium text-primary transition-colors hover:bg-primary/5">✉️ hello@reconfintech.com</a>
+              <a href={`mailto:info@reconfintech.com`} className="rounded-lg bg-white px-3 py-2 text-sm font-medium text-primary transition-colors hover:bg-primary/5">✉️ info@reconfintech.com</a>
               <a href={waUrl} target="_blank" rel="noopener noreferrer" className="rounded-lg bg-white px-3 py-2 text-sm font-medium text-primary transition-colors hover:bg-primary/5">💬 Chat on WhatsApp</a>
             </div>
           </div>

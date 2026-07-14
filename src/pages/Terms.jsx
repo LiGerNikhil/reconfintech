@@ -32,7 +32,7 @@ export default function Terms() {
           <p className="mb-6 leading-relaxed">These terms shall be governed by and construed in accordance with the laws of England and Wales, without regard to its conflict of law provisions.</p>
 
           <h2 className="mb-4 text-xl font-bold text-ink">6. Contact</h2>
-          <p className="mb-6 leading-relaxed">For questions about these terms, please contact us at hello@reconfintech.com.</p>
+          <p className="mb-6 leading-relaxed">For questions about these terms, please contact us at info@reconfintech.com.</p>
         </div>
       </section>
     </>

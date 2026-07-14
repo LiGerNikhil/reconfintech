@@ -3,7 +3,8 @@ import { Helmet } from 'react-helmet-async'
 
 const officeHours = 'Mon�Fri, 9:00 AM � 6:00 PM EST'
 const phone = '+91 99114 44938'
-const email = 'hello@reconfintech.com'
+const email = 'info@reconfintech.com'
+const address = 'Property No. 103, First Floor, Ansal Chamber-1, 3, Bhikaji Cama Place, New Delhi-110066'
 const waLink = 'https://wa.me/919911444938'
 
 export default function Contact() {
@@ -116,6 +117,13 @@ export default function Contact() {
               <h3 className="mb-1 mt-4 text-sm font-bold text-ink">WhatsApp</h3>
               <a href={waLink} target="_blank" rel="noopener noreferrer" className="text-sm text-primary transition-colors hover:text-primary-dark">Chat on WhatsApp</a>
               <p className="mt-1 text-xs text-body/70">We typically reply within 1 hour</p>
+            </div>
+            <div className="rounded-xl border border-border-soft bg-surface p-6 shadow-soft">
+              <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10 text-primary">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="h-5 w-5" aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0zm3 0a6 6 0 11-12 0 6 6 0 0112 0zM2.25 21c.858-2.61 3.535-4.5 6.75-4.5s5.892 1.89 6.75 4.5" /></svg>
+              </span>
+              <h3 className="mb-1 mt-4 text-sm font-bold text-ink">Office Address</h3>
+              <p className="text-sm leading-relaxed text-body">{address}</p>
             </div>
             <div className="rounded-xl border border-border-soft bg-surface p-6 shadow-soft">
               <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10 text-primary">

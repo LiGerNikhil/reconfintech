@@ -29,7 +29,7 @@ export default function Cookies() {
           <p className="mb-6 leading-relaxed">We may update this Cookie Policy from time to time. We will notify you of any material changes by posting the new policy on this page.</p>
 
           <h2 className="mb-4 text-xl font-bold text-ink">5. Contact</h2>
-          <p className="mb-6 leading-relaxed">If you have any questions about our use of cookies, please contact us at hello@reconfintech.com.</p>
+          <p className="mb-6 leading-relaxed">If you have any questions about our use of cookies, please contact us at info@reconfintech.com.</p>
         </div>
       </section>
     </>

@@ -29,10 +29,10 @@ export default function Privacy() {
           <p className="mb-6 leading-relaxed">We implement appropriate technical and organisational measures to protect your personal data against unauthorised access, alteration, disclosure, or destruction. We are SOC 2 Type II certified and comply with GDPR requirements.</p>
 
           <h2 className="mb-4 text-xl font-bold text-ink">5. Your Rights</h2>
-          <p className="mb-6 leading-relaxed">Depending on your jurisdiction, you may have the right to access, correct, delete, or port your personal data. You may also have the right to restrict or object to certain processing activities. To exercise these rights, please contact us at hello@reconfintech.com.</p>
+          <p className="mb-6 leading-relaxed">Depending on your jurisdiction, you may have the right to access, correct, delete, or port your personal data. You may also have the right to restrict or object to certain processing activities. To exercise these rights, please contact us at info@reconfintech.com.</p>
 
           <h2 className="mb-4 text-xl font-bold text-ink">6. Contact</h2>
-          <p className="mb-6 leading-relaxed">If you have any questions about this Privacy Policy, please contact us at hello@reconfintech.com.</p>
+          <p className="mb-6 leading-relaxed">If you have any questions about this Privacy Policy, please contact us at info@reconfintech.com.</p>
         </div>
       </section>
     </>
